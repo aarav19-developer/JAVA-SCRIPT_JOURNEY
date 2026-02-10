@@ -1,0 +1,22 @@
+.heading{
+    color: greenyellow;
+    background-color: orange;
+}
+body{
+    background-color: yellow ;
+}
+button{
+    background-color: red;
+
+}
+
+.box{
+    margin: 3px;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    background-color: cyan;
+    border: 2px solid rgb(14, 23, 2);
+    text-align: center;
+}
