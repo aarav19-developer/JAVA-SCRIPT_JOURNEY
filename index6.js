@@ -7,7 +7,8 @@ console.log(window)
                  // It is an global object with lots of properties and method.
 
 // What is DOM ? 
-// When a web page is loaded, the browser cretes a document object model(DOM) of the page.
+// When a web page is loaded, the browser takes he HTML code and builds a tree-like structure in memory, 
+// that structure is called a document object model(DOM) of the page.
 
 // NOTE: To apply methods on object we have to use (.dir).
 console.dir(document)

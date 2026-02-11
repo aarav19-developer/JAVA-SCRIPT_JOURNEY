@@ -1,0 +1,20 @@
+#box{
+    height: 150px;
+    width: 100px;
+    background-color: cyan;
+    color: red;
+    border: 2px, solid, black;
+}
+.para2{
+    color: red;
+    background-color: pink;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.contentpara2{
+    background-color: aquamarine;
+    font-size: medium;
+    font-style: unset;
+    color: blue;
+}
