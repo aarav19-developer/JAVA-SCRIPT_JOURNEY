@@ -1,62 +1,62 @@
-// // EVENT IN JAVASCRIPT:-
-//                     // The change in the state of an object is known as an event.
-//                     // events are fired to notify code of "interesting changes" that may affect code execution.
+// EVENT IN JAVASCRIPT:-
+                    // The change in the state of an object is known as an event.
+                    // events are fired to notify code of "interesting changes" that may affect code execution.
 
-//                     // Ex: 
-//                           // Mouse events (lick, double click, etc)
-//                           // Keywords events (keypress, keyup, keydown)
-//                           // Form events (submit etc)
-//                           // print event & many more.
+                    // Ex: 
+                          // Mouse events (lick, double click, etc)
+                          // Keywords events (keypress, keyup, keydown)
+                          // Form events (submit etc)
+                          // print event & many more.
 
-// // EVENT Handling In JavaScript:
-//                               // node.event =() => {
-//                                 // handle here
-//                                 // }
+// EVENT Handling In JavaScript:
+                              // node.event =() => {
+                                // handle here
+                                // }
 
-// let btn1 = document.querySelector("#btn1");
+let btn1 = document.querySelector("#btn1");
 
-// btn1.onclick = () => {
-//     console.log("btn1 was clicked!");
-//     let a = 21;
-//     a++;
-//     console.log(a)
-// };
-// btn1.onclick =() =>{
-//      console.log("Handler1")
-// }
-
-
-// let div = document.querySelector("div");
-// div.onmouseover = () =>{
-//     console.log("you are inside a div!")
-// }
+btn1.onclick = () => {
+    console.log("btn1 was clicked!");
+    let a = 21;
+    a++;
+    console.log(a)
+};
+btn1.onclick =() =>{
+     console.log("Handler1")
+}
 
 
-// // EVENT OBJECT: 
-//              // It is a special object that has details about the event.
-//              // All event handlers have access to the Event Object's properties and methods.
-
-//              // node.event = (e) => {
-
-//                  // handle here
-
-//                 // }
-
-// btn1 = document.querySelector("#btn1")
-// btn1.onclick= (e) =>{
-//     console.log(e)
-//     console.log(e.type)
-//     console.log(e.target)
-//     console.log(e.clientX,e.clientY)
-// }; 
+let div = document.querySelector("div");
+div.onmouseover = () =>{
+    console.log("you are inside a div!")
+}
 
 
-// // EVENT LISTENERS:
-//                     // node.addEventListener (event, callback)
+// EVENT OBJECT: 
+             // It is a special object that has details about the event.
+             // All event handlers have access to the Event Object's properties and methods.
 
-//                     // node.removeEventListener (event, callback)
+             // node.event = (e) => {
 
-//                     // NOTE: The callback reference should be same to remove.
+                 // handle here
+
+                // }
+
+btn1 = document.querySelector("#btn1")
+btn1.onclick= (e) =>{
+    console.log(e)
+    console.log(e.type)
+    console.log(e.target)
+    console.log(e.clientX,e.clientY)
+}; 
+
+
+// EVENT LISTENERS:
+                    // node.addEventListener (event, callback)
+
+                    // node.removeEventListener (event, callback)
+
+                    // NOTE: The callback reference should be same to remove.
 
 btn1.addEventListener("click", () =>{
     console.log("btn1 was clicked")
@@ -96,4 +96,3 @@ theme.addEventListener("click", ()=>{
     }
     console.log(current_theme)
 });
-
