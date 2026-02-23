@@ -50,9 +50,9 @@ let f = 4;
 let cond1 = d>f;
 let cond2 = d===f;
 console.log(cond1 && cond2)
-// 2. Logical Or {||}: atleast one of th =e condition is ture it will return true.
+// 2. Logical Or {||}: atleast one of the condition is ture it will return true.
 console.log(cond1 || cond2) 
-// 3. Logical Not {!}: rever the condition.
+// 3. Logical Not {!}: reverse the condition.
 console.log(!d>f)
 
 // Ternary Operators:
