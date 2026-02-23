@@ -18,7 +18,7 @@ for(let i = 1; i <= 5; i++ ){
     console.log(i)
 }
 
-// NOTE: in the above loop if we try to print "i" after the loop, then it will show error bca the [ let ] variable is block scope variable.
+// NOTE: in the above loop if we try to print "i" after the loop, then it will show error bcz the [ let ] variable is block scope variable.
 //       so if we have to print "i" after the loop ended we have to use [ var ] variable instead of [let].
 
 // INFINITE Loop:- A loop that never ends( means that stopping condition can never be false).
@@ -101,23 +101,23 @@ for(let i = 0;i<= 100;i++){
 // Create a game where you start with any random game number.
 // Ask the user to keep guessing the game number until the user enters correct value.
 
-// let s = prompt("Can you guess the correct number: ");
-// if(s == 22){
-//     console.log("You won, you guess the correct number")
-// }
-// else{
-//     console.log("oops!, You lose")
-// }
+let s13 = prompt("Can you guess the correct number: ");
+if(s13 == 22){
+    console.log("You won, you guess the correct number")
+}
+else{
+    console.log("oops!, You lose")
+}
 
-// OR
+OR
 
-//  let gameNum = 1322;
-//  let userNum = prompt("Guess the game number: ");
+ let gameNum = 1322;
+ let userNum = prompt("Guess the game number: ");
 
-// while(userNum != gameNum){
-//     userNum= prompt("you lose, guess again")
-// }
-// console.log("congrats, you won")
+while(userNum != gameNum){
+    userNum= prompt("you lose, guess again")
+}
+console.log("congrats, you won")
 
 // STRING:- String is a sequence of characters used to represent text.
 

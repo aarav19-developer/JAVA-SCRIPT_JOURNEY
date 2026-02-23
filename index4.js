@@ -43,14 +43,14 @@ console.log(avg)
 // All items have an offer of 10% OFF on them. Change the array to storte final price after applying offer.
 
 items = [250,645,300,900,50]
-// item0 = items[0] - (10 * items[0]/ 100)
-// item1 = items[1] - (10 * items[1]/ 100)
-// item2 = items[2] - (10 * items[2]/ 100)
-// item3 = items[3] - (10 * items[3]/ 100)
-// item4 = items[4] - (10 * items[4]/ 100)
+item0 = items[0] - (10 * items[0]/ 100)
+item1 = items[1] - (10 * items[1]/ 100)
+item2 = items[2] - (10 * items[2]/ 100)
+item3 = items[3] - (10 * items[3]/ 100)
+item4 = items[4] - (10 * items[4]/ 100)
 
-// new_items = [item0,item1,item2,item3,item4]
-// console.log(new_items)
+new_items = [item0,item1,item2,item3,item4]
+console.log(new_items)
 
 // OR
 
@@ -70,8 +70,8 @@ console.log(items)
 // shift() : detele from start & return
 // slice() : returns a piece of the array.
             // slice( start index, end index)
-// splice() : chnage original array( add, remove, replace)
-             // splice( start index, number of deleted items , new item wich you want to add).
+// splice() : change original array( add, remove, replace)
+             // splice( start index, number of deleted items , new item which you want to add).
 
 
 // TASK: 
