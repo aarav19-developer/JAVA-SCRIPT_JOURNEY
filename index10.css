@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1{
+    background-color: black;
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+
+}
+
+.choice{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+#rock{
+    background-color: black;
+    /* background-color: rgb(252, 140, 159); */
+}
+#paper{
+    background-color: black;
+    /* background-color: rgb(218, 70, 218); */
+}
+#scissor{
+    background-color: black;
+    /* background-color: rgb(74, 182, 225); */
+}
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.choice:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    
+}
+
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+
+
+}
+
+#user-score, #computer-score{
+    font-size: 5rem;
+}
+
+
+.msg-container{
+    margin-top: 5rem;
+}
+#message{
+    background-color:rgb(0, 0, 0);
+    color: white;
+    font-size: 2rem;
+    margin-top: 5rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 2rem;
+
+}
