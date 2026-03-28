@@ -69,13 +69,13 @@ class Bmw_car {
     }
 }
 
-let RollsRoyce = new Bmw_car();
+let RollsRoyce = new Bmw_car();  // new keyword find the constructor.
 let g_wagon = new Bmw_car();
 let volvo = new Bmw_car();
 volvo.setBrand("BMW");
 
 
-// CONSTRUCTOR METHOD:
+// CONSTRUCTOR METHOD:  constructor general work to initialize the object.
 //                     automatically invoked by new constructor.
 //                     initializes object.
 
@@ -84,4 +84,181 @@ volvo.setBrand("BMW");
 //     myMethod(){...}
 // }
 
-// PAUSE...
+class hero{
+    constructor(title) {
+        console.log("Creating new object")
+        this.title = title
+    }
+    start(){
+        console.log("start")
+    }
+    stop() {
+        console.log("stop")
+    }
+
+}
+
+let S22 = new hero("A");  //constructor
+console.log(S22)
+let S = new hero();      //constructor
+console.log(S)
+
+
+// INHERITANCE IN JAVASCRIPT:
+//                              Passing down properties and method from parent class to child class.
+
+class parent{
+    hello() {
+        console.log("hello")
+    }
+}
+ class child extends parent{
+    
+ }
+let obj = new child();
+
+class person{
+    constructor() {
+        this.species = "homo sapiens"
+    }
+    eat(){
+        console.log("eat")
+    }
+    sleep(){
+        console.log("sleep")
+    }
+    work(){
+        console.log("DO nothing")
+    }
+}
+
+class Engineer extends person{
+    work(){
+        console.log("build something, solve probelm")
+    }
+}
+
+class Doctor extends person{
+    work(){
+        console.log("Treat patients")
+    }
+}
+
+let A19 = new Engineer();
+
+// NOTE: If child and parent have same method, child's method will be used. [Method Overriding].
+
+
+// SUPER KEYWORD:
+//                The super keyword is used to call the constructor of its parent class to access the parent's properties and methods.
+
+// super(args) // class parent's constructor
+
+// super.parentMethod(args)
+
+class person1{
+    constructor() {
+        console.log("Enter parent constructor")
+        this.species = "homo sapiens"
+    }
+    eat(){
+        console.log("eat")
+    }
+    sleep(){
+        console.log("sleep")
+    }
+}
+
+class Engineer1 extends person{
+    constructor(branch){
+        console.log("Enter child constructor")
+        super();  // to invoke parent class constructor
+        this.branch = branch
+        console.log("Exit child constructor")
+    }
+    work(){
+        super.eat();
+        console.log("build something, solve probelm")
+    }
+}
+
+let Eng = new Engineer1("Computer Science Engineer");
+
+
+
+// PRACTICE PROBLEM:
+// You are creating a website for your college. Create a class User with 2 properties, name and email. 
+// It also has a method called viewData() that allows user to view website data.
+
+
+// let Data = "dear zindagi"
+// class User{
+//     constructor(name,email){
+//         this.name = name;
+//         this.email = email;
+
+//     }
+
+//     viewData() {
+//         console.log("Data = ", Data)
+//     }  
+// }
+
+// let student1 = new User("AARAV","aaravharit418@gmail.com")
+// let student2 = new User("SAARAV","aaravharit19@gmail.com")
+
+
+// Create a new class called ADMIN which inherit from User. Add a new method called editData to ADMIN that allows it to edit website data.
+
+
+let Data = "dear zindagi"
+class User{
+    constructor(name,email){
+        this.name = name;
+        this.email = email;
+
+    }
+
+    viewData() {
+        console.log("Data = ", Data)
+    }  
+}
+
+class Admin extends User{
+    constructor(name,email){
+        super(name,email)
+    }
+    editData() {
+        DATA = "Some new value"
+    }
+}
+
+let student1 = new User("AARAV","aaravharit418@gmail.com")
+let student2 = new User("SAARAV","aaravharit19@gmail.com")
+
+let admin1 = new Admin();
+
+
+// ERROR HANDLING:
+
+// try-catch
+
+// try{
+// normal code
+// }catch(err){ // err is an object
+//   ...handling error
+// }
+
+let a = 5;
+let b = 10;
+console.log("a=" , a)
+console.log("b=" , b)
+console.log(a+b)
+console.log(a+b)
+try{
+    console.log(a+c)  // error
+}catch(err){
+    console.log(err)
+}
+console.log(a+b)
+console.log(a+b)
