@@ -131,11 +131,95 @@
 
           // A javascript Pormise object can be :
                                          // Pending: The result is undefined
-                                         // Resolved: The result is a value(fulfilled).
-                                         // Rejected: The result is ana error object.
+                                         // Resolved: The result is a value(fulfilled).   resolve(result)
+                                         // Rejected: The result is ana error object.     reject(error)
+          // NOTE: Promise has state (pending, fulfiled) and some result (result for resolve & error for reject).
 
-let promise = new Promise((resolve,reject) =>{
+
+// let promise = new Promise((resolve,reject) =>{
+//     console.log("I am a promise")
+//     // resolve("Dear zindagi")
+//     reject("Error")
+// });
+
+// function getData(dataId, getNextData){
+//      return new Promise((resolve, reject) =>{
+//         setTimeout(() => {
+//             console.log("Data",dataId);
+//             resolve("success")
+//             if(getNextData){
+//                 getNextData()
+//             }
+//         }, 7000);
+//      })
+// }
+
+        // .then() & .catch():
+                    // promise.then((res) =>{...})
+                    // promise.catch((error) =>{...})
+
+
+const getPromise = () => {
+    return new Promise((resolve,reject) =>{
     console.log("I am a promise")
-    // resolve("Dear zindagi")
-    reject("Error")
-})
+    resolve("Dear zindagi")
+    // reject("Error")
+});
+};
+
+let promise = getPromise();
+promise.then((res) =>{
+    console.log("promise fulfilled",res)
+});
+
+// promise.catch((err)=>{
+//     console.log("Error",err)
+// })
+                    
+// PROMISE CHAINING:
+
+// function asyncfunc() {
+//     return new Promise((resolve,reject) =>{
+//         setTimeout(()=>{
+//             console.log("Some Data 1")
+//             resolve("success")
+//         },4000)
+//     })
+// }
+
+// console.log("Fetching Data 1...")
+
+// let s = asyncfunc()
+// s.then((res)=>{
+//     console.log(res)
+// });
+
+
+function asyncfunc() {
+    return new Promise((resolve,reject) =>{
+        setTimeout(()=>{
+            console.log("Some Data 1")
+            resolve("success")
+        },4000)
+    })
+}
+
+function asyncfunc2() {
+    return new Promise((resolve,reject) =>{
+        setTimeout(()=>{
+            console.log("Some Data 2")
+            resolve("success")
+        },4000)
+    })
+}
+
+console.log("Fetching Data 1...")
+
+let s = asyncfunc()
+s.then((res)=>{
+    console.log("Fetching Data 2...")
+    let s2 = asyncfunc2()
+    s2.then((res)=>{
+    })
+});
+
