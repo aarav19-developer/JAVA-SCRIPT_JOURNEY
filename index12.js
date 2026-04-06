@@ -195,31 +195,92 @@ promise.then((res) =>{
 // });
 
 
-function asyncfunc() {
-    return new Promise((resolve,reject) =>{
-        setTimeout(()=>{
-            console.log("Some Data 1")
-            resolve("success")
-        },4000)
+// function asyncfunc() {
+//     return new Promise((resolve,reject) =>{
+//         setTimeout(()=>{
+//             console.log("Some Data 1")
+//             resolve("success")
+//         },4000)
+//     })
+// }
+
+// function asyncfunc2() {
+//     return new Promise((resolve,reject) =>{
+//         setTimeout(()=>{
+//             console.log("Some Data 2")
+//             resolve("success")
+//         },4000)
+//     })
+// }
+
+// console.log("Fetching Data 1...")
+
+// let s = asyncfunc()
+// s.then((res)=>{
+//     console.log("Fetching Data 2...")
+//     let s2 = asyncfunc2()
+//     s2.then((res)=>{
+//     })
+// });
+
+// ASYNC-AWAIT:
+            //  Async function always returns a promise.
+            // async function myFunc() {....}.
+            // await pauses the execution of it surrounding async function until the promise is settled.
+
+async function hello(){
+    console.log("S")
+}
+
+function api(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("weather data")
+            resolve(200);
+            
+        },2000);
     })
 }
 
-function asyncfunc2() {
-    return new Promise((resolve,reject) =>{
-        setTimeout(()=>{
-            console.log("Some Data 2")
-            resolve("success")
-        },4000)
-    })
+// await api()    Do not use directly.
+
+async function getWeatherData() {
+    await api();   // First call
+    await api();   // Second call
 }
 
-console.log("Fetching Data 1...")
 
-let s = asyncfunc()
-s.then((res)=>{
-    console.log("Fetching Data 2...")
-    let s2 = asyncfunc2()
-    s2.then((res)=>{
-    })
-});
+function digital(digitalId){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("DATA",digitalId);
+            resolve("success")
+        },2000)
+    });
+};
 
+async function alldigital(){
+    console.log("Fetching Data 1.....")
+    await digital("A")
+    console.log("Fetching Data 2.....")
+    await digital("S")
+    console.log("Fetching Data 3.....")
+    await digital("D")
+
+};
+
+// IIFE [ IMMEDIATELY INVOKED FUNCTION EXPRESSION]:
+                                     // IIFE is a function that is called immediately as soon as it is defined.
+                                     // (function with out name)();
+
+(async function alldigital(){
+    console.log("Fetching Data 1.....")
+    await digital("A")
+    console.log("Fetching Data 2.....")
+    await digital("S")
+    console.log("Fetching Data 3.....")
+    await digital("D")
+
+})();
+
+// NOTE: Use only one time and it is used to call function automatically.
